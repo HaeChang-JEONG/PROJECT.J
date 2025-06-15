@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<style>
+			body{
+				text-align:center;
+			}
+			.bt{
+				width:20%;
+				height:10%;
+				background-color:green;
+				font-size:2em;
+				color:white;
+				font-weight:bold;
+			}
+			.txt{
+				width:80%;
+				height:10%;
+				background-color:ligthgreen;
+				font-size:4em;
+				font-weight:bold;
+				color:blue;
+				text-align:center;
+			}
+			.hh{
+				font-size:3em;
+				font-weight:bold;
+				color:purple;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class='hh'>100점 만점에 몇점일까요??</h1><br>
+		<input type='text' class='txt' id='txt1'><br><br><br><br>
+		<button class='bt' onclick='btn1_fnc();'> 100점! </button>
+		<button class='bt' onclick='btn2_fnc();'> 95점!</button>
+		<button class='bt' onclick='btn3_fnc();'> 90점!</button>
+		<button class='bt' onclick='btn4_fnc();'> 제발요!</button>
+		
+
+		<script>
+			function btn1_fnc()
+			{
+				document.getElementById('txt1').value='100점!';
+			}
+			function btn2_fnc()
+			{
+				document.getElementById('txt1').value='95점!';
+			}
+			function btn3_fnc()
+			{
+				document.getElementById('txt1').value='90점!';
+			}
+			function btn4_fnc()
+			{
+				document.getElementById('txt1').value='다시 한 번만 고려해주세요..ㅠ';
+			}
+			
+		</script>
+	</body>
+</html>

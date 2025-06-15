@@ -1,0 +1,35 @@
+
+<html>
+<head>
+    <title>이미지 바꾸기</title>
+    <style>
+	body{
+		 align-items: center; 
+		text-align:center;
+		}
+            .btn {
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function changeimage() {
+            document.getElementById('img1').src = '새끼고양이.jpg';
+        }
+
+        function backimage() {
+            document.getElementById('img1').src = '어른고양이.jpg';
+        }
+        
+    </script>
+
+    <img id="img1" src="고양이의역변.jpg"><br><br>
+    <input type='button' class='btn' value='사진바꾸기' onclick='changeimage();'>
+    <input type='button' class='btn' value='사진되돌리기' onclick='backimage();'>
+</body>
+</html>

@@ -1,0 +1,74 @@
+	<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+        .txt {
+            width: 60%;
+            height: 40%;
+            text-align: center;
+            font-size: 5em;
+            font-weight: bold;
+            color: GREEN;
+            border: 3px solid black;
+        }
+        .btn {
+            width: 25%;
+            height: 50%;
+            font-size: 4em;
+            font-weight: bold;
+            background-color: PURPLE;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> 타이머 </h1>
+    <input type='text' class='txt' id='txt1'><br><br>
+    <button class='btn' onclick='card1();'> 시작하기</button>
+    <button class='btn' onclick='card2();'> 멈추기 </button>
+    <button class='btn' onclick='card3();'> 리셋</button>
+
+    <script>
+        setInterval(timer, 100);
+
+        var i = 0;
+        var state = 0;
+
+        function timer() {
+            switch (state) {
+                case 1:
+                    i++;
+                    break;
+
+                case 2:
+                    // 멈춤 상태 (변경 없음)
+                    break;
+
+                case 3:
+                    i = 0;
+                    state = 0; // 초기 상태로 변경해주기
+                    break;
+
+                default:
+                    break;
+            }
+            document.getElementById('txt1').value = i;
+        }
+
+        function card1() {
+            state = 1;
+        }
+
+        function card2() {
+            state = 2;
+        }
+
+        function card3() {
+            state = 3;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+    <h1>사진 변화</h1>
+    <img id='img1' src='자쿰.jpg'>
+
+    <script>
+        setInterval(timer, 700);
+        let step = 1;
+        function timer() {
+            switch (step) {
+                case 1:
+                    document.getElementById('img1').src = '자쿰.jpg';
+                    step = 2;
+                    break;
+                case 2:
+                    document.getElementById('img1').src = '혼테일.jpg';
+                    step = 3;
+                    break;
+                case 3:
+                    document.getElementById('img1').src = '핑크빈.jpg';
+                    step = 1;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
